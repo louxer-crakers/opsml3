@@ -70,5 +70,4 @@ jobs:
 
       - name: Rollout and restart deployment
         run: |
-          cd kubernetes/
-          kubectl rollout restart apps-deployment
+          kubectl rollout restart deployment/apps-deployment
