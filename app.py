@@ -98,7 +98,7 @@ def dashboard():
     for _, row in df.iterrows():
         image_key = row['image_key']
         if not grouped_data[image_key]['image_url']:
-            grouped_data[image_key]['image_url'] = f"https://s3.amazonaws.com/s3user-bucket-input-25/{image_key}"
+            grouped_data[image_key]['image_url'] = f"https://s3.amazonaws.com/technoinput-blitar-feriadi/{image_key}"
         grouped_data[image_key]['labels'].append(row['label'])
         grouped_data[image_key]['confidences'].append(row['confidence'])
 

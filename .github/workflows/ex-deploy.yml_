@@ -68,10 +68,7 @@ jobs:
         run: |
           aws eks update-kubeconfig --name ${{ secrets.CLUSTER_NAME }} --region ${{ secrets.AWS_REGION }}
 
-      - name: Delete old Kubernetes resources
+      - name: Rollout and restart deployment
         run: |
-          your kubernetes delete command here
-
-      - name: Deploy new version to EKS
-        run: |
-          your kubernetes apply command here
+          cd kubernetes/
+          kubectl rollout restart apps-deployment
